@@ -8,7 +8,6 @@ http.createServer(function(request, response) {
         response.write("<html><body><p>Doge is tired now.</p></body></html>");
         response.end();
     }, 2000);
-    response.end();
 }).listen(8080);
 
 console.log('Listening on port 8080...');
