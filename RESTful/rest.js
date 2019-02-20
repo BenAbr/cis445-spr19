@@ -82,7 +82,26 @@ app.patch('/players/:playerid/reset', function(request, response) {
     response.end();
 });
 
+// Create a Level path
+app.post('/levels/add', function(request, response) {
+    response.writeHead(200);
+    response.write('<html><body><h1>Add a level</h1></body></html>');
+    response.end();
+});
 
+// Delete a level path
+app.delete('/levels/:levelid/delete', function(request, response) {
+    response.writeHead(200);
+    response.write('<html><body><h1>Reset Player statistics?</h1></body></html>');
+    response.end();
+});
+
+// Reset a server path
+app.patch('/servers/:serverid/reset', function(request, response) {
+    response.writeHead(200);
+    response.write('<html><body><h1>Reset server</h1></body></html>');
+    response.end();
+});
 
 app.listen(8080, function() {
     console.log('express is up on port 8080...');
